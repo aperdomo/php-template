@@ -28,3 +28,4 @@ This is a simple template for conveniently standing up basic PHP environments to
 - `make test-with-coverage-html` - This will run tests with coverage and open the coverage report in a browser.
 - `make phpcs` - This will lint the project.
 - `make phpcs-fix` - This will apply linter fixes to the project.
+- `make interactive-shell` - Interactive shell into the service instance.

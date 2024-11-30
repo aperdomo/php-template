@@ -8,6 +8,7 @@ ifneq (,$(wildcard ./.env))
 endif
 
 DOCKER_EXEC = docker exec -t $(CONTAINER_NAME_SERVICE)
+DOCKER_EXEC_INTERACTIVE = docker exec -it $(CONTAINER_NAME_SERVICE)
 
 init:
 	cp .env.example .env && make build && make start && make composer-install
@@ -33,3 +34,5 @@ phpcs:
 	$(DOCKER_EXEC) ./vendor/bin/phpcs -p
 phpcs-fix:
 	$(DOCKER_EXEC) ./vendor/bin/php-cs-fixer fix
+interactive-shell:
+	$(DOCKER_EXEC_INTERACTIVE) /bin/bash
