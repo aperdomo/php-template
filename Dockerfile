@@ -1,5 +1,5 @@
 # Setup PHP.
-FROM php:8.3 AS base
+FROM php:8.4 AS base
 
 # Install relevant dependencies.
 RUN apt-get update && apt-get install -y \

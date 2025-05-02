@@ -13,7 +13,7 @@ DOCKER_EXEC_INTERACTIVE = docker exec -it $(CONTAINER_NAME_SERVICE)
 init:
 	cp .env.example .env && make build && make start && make composer-install
 build:
-	docker compose build --no-cache
+	docker compose build
 stop:
 	docker compose down
 start:
